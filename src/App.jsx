@@ -10,7 +10,7 @@ const App = () => {
   const [mostrarModalEdicion, setMostrarModalEdicion] = useState(false);
   const [usuarioEditando, setUsuarioEditando] = useState(null);
   const [filtroLetra, setFiltroLetra] = useState('');
-  const [cantidadRegistros, setCantidadRegistros] = useState(5); // Estado para la cantidad de registros a mostrar
+  const [cantidadRegistros, setCantidadRegistros] = useState(5); 
 
   const agregarUsuario = (nuevoUsuario) => {
     setUsuarios([...usuarios, nuevoUsuario]);
@@ -70,7 +70,7 @@ const App = () => {
       <button onClick={abrirModalAgregar}>Registrar nuevo usuario</button>
       {mostrarModalAgregar && <FormularioModal onGuardar={agregarUsuario} onClose={cerrarModalAgregar} />}
       <Filtro onFiltrar={handleFiltrarPorLetra} />
-      <select value={cantidadRegistros} onChange={handleCambiarCantidadRegistros}> {/* Agrega el select para seleccionar la cantidad de registros */}
+      <select value={cantidadRegistros} onChange={handleCambiarCantidadRegistros}>
         <option value="5">Mostrar 5 registros</option>
         <option value="10">Mostrar 10 registros</option>
         <option value="15">Mostrar 15 registros</option>
